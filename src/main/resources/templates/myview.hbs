@@ -16,28 +16,29 @@
         </thead>
         <tbody>
 
-        {{#each animals}}
+        {{# each animals}}
         <tr>
+            <th scope="row">{{id}}</th>
                 <td >{{animal_location}}</td>
                 <td>{{animal_name}}</td>
                 <td>{{animal_age}}</td>
-                <td>{{animal_health}}</td>
-
+                <td>Null</td>
             </tr>
         {{/each}}
-        </tbody>
 
-    {{#each Sighting}}
-        <tbody>
+
+    {{#each sightings}}
+
         <tr>
+            <th scope="row">{{id}}</th>
             <td>{{animal_location}}</td>
             <td>{{animal_name}}</td>
             <td>{{animal_age}}</td>
             <td>{{animal_health}}</td>
         </tr>
-        </tbody>
     {{/each}}
-
+        </tbody>
     </table>
+    <a class="btn btn-success" href="/clearAll">Clear All</a>
 {{/partial}}
 {{> layout.hbs}}
