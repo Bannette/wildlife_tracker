@@ -40,7 +40,7 @@ public class Endanger {
 
 
     public void saveSightedAnimal(Sighting sighting) {
-        try (Connection conn = Database.sql2otest.open()) {
+        try (Connection conn = Database.sql2o.open()) {
             String sql = "INSERT INTO  sightings(animal_id, animal_location, ranger_name ) VALUES (:animal_id, :animal_location, :ranger_name);";
             this.animal_id = (int) conn.createQuery(sql, true)
                     .addParameter("animal_location", this.location)
