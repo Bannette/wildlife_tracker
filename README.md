@@ -1,8 +1,8 @@
 # PROJECT NAME
-WILDLIFE_TRACKER
+### WILDLIFE_TRACKER
 
 # AUTHOR NAME
- BANNETTE ALOO ODEMBO
+ ### BANNETTE ALOO ODEMBO
 # DESCRIPTION OF A PROJECT
 This application allows user to search for animal and know if its endangared or not and also view thier sighting
 
@@ -10,10 +10,10 @@ BDD
 INPUT: User is able to assign a Hero to a single squad
 OUTPUT: Squad created.
 # PROJECT SETUP INSTRUCTION
-Installed editor which on my preference is intellJ
-Installed git vasual control(for tracking my changes)
-Clone to this repository to your local machine to get Started https://github.com/Bannette/Heros-squad
-You need the following installed on your machine
+* Installed editor which on my preference is intellJ
+* Installed git vasual control(for tracking my changes)
+* Clone to this repository to your local machine to get Started https://github.com/Bannette/wildlife_tracker
+* You need the following installed on your machine
 
 java
 JDK - Java Development Kit To confirm run the following command $ gradle run
