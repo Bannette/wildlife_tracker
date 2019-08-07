@@ -85,7 +85,7 @@ public class Animal implements AnimalInterface{
 
     @Override
     public void saveAnimal(Animal animal) {
-        try (Connection conn = Database.sql2otest.open()){
+        try (Connection conn = Database.sql2o.open()){
             String sql = "INSERT INTO  animals( animal_name,animal_health,animal_age,location ) VALUES ( :animal_name,:animal_health,:animal_age,:location)";
             this.id = (int) conn.createQuery(sql, true)
                     .addParameter("animal_name", this.animal_name)
@@ -98,7 +98,7 @@ public class Animal implements AnimalInterface{
     }
 
     public static List<Animal> getAllAnimals() {
-        try(Connection conn = Database.sql2otest.open()){
+        try(Connection conn = Database.sql2o.open()){
             String sql = "SELECT * FROM animals ORDER BY id DESC;";
             return conn.createQuery(sql)
                     .throwOnMappingFailure(false)
@@ -109,7 +109,7 @@ public class Animal implements AnimalInterface{
     @Override
     public Animal findById(int id) {
         String sql = "SELECT * FROM animals WHERE id=:id;";
-        try (Connection conn = Database.sql2otest.open()){
+        try (Connection conn = Database.sql2o.open()){
             Animal animal = conn.createQuery(sql)
                     .addParameter("id",id)
                     .executeAndFetchFirst(Animal.class);
