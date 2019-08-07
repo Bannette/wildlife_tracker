@@ -1,90 +1,62 @@
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/app.css'>
+{{/partial}}
 {{#partial "content"}}
-    <section class="dash">
-        <h1>
-            <span>Wildlife tracker dashboard</span>
-            <a href="/"><-</a> </h1>
-        <section class="stats">
+    <h1 class="header">WILDLIFE TRACKER</h1>
+    <br>
+    <br>
+    <br>
+    <h2>Animal Sighting</h2>
+    <form method="post" action="\view")>
+        <div class="form-group">
+            <label for="rangerName">Ranger's Name</label>
+            <input type="text" id="rangerName" name="rangerName">
+        </div>
+        <hr>
+        <p>location</p>
+        <select name="sightingLocation" id="sightingLocation">
+            <option value="Zone1">North</option>
+            <option value="Zone2">South</option>
+            <option value="Zone3">East</option>
+            <option value="Zone4">West</option>
+            <option value="Zone5">Central</option>
+        </select>
+        <hr>
+        <div class="form-group">
+            <label for="animalName">Animal Name</label>
+            <input type="text" id="animalName" name="animalName">
+        </div>
+        <div class="form-group">
+            <p>Animal Age</p>
+            <select name="animalAge" id="animalAge">
+                <label for="animalAge">Animal Age</label>
+                <option value="newborn">Newborn</option>
+                <option value="young">Young</option>
+                <option value="adult">Adult</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Animal Health</p>
+            <select name="animalHealth" id="animalHealth">
+                <label for="animalHealth">Animal Health</label>
+                <option value="weak">ill</option>
+                <option value="weak">Weak</option>
+                <option value="healthy">Healthy</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Animal  Type</p>
+            <select name="animalType" id="animalType">
+                <label for="animalType">Animal Type</label>
+                <option value="safe">Safe</option>
+                <option value="endangered">Endangered</option>
+            </select>
+        </div>
 
-            <div class="left-sec">
-                <h3>Tracked Animals</h3>
-                {{#each  allSightings}}
-                    <div>
-                        <p>Animal{{animal_name}} Spotted</p>
-                        <p>Location: {{animal_location}}</p>
-                        <p>By: Ranger {{ranger_name}}</p>
-                    </div>
-                {{/each}}
-                <div>
-                    <p>Rhino Spotted</p>
-                    <p>Zone A</p>
-                    <p>By: Ranger Cliff</p>
-                </div>
-            </div>
-
-            <div class="right-sec">
-                <div>
-                    <p> <span class="track" data-value="486">486</span>K <br> Number of tracked animals </p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div>
-                    <p> <span class="sick">5689</span>K <br> Number of sick animals rescued </p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div>
-                    <p> <span class="money">100</span>K <br> Total amount saved by tracking </p>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div class="graph">
-                    <div class="graph1">TRACKED</div>
-                    <div class="graph2">RESCUED</div>
-                    <div class="graph3">SAVED</div>
-                </div>
-            </div>
-
-        </section>
-        <section class="recorded">
-            <h1 class="text-center"><span class="text-center">Recorded Animals</span></h1>
-
-            <div>
-                <h1><span>Normal</span></h1>
-                {{#each   allAnimals}}
-                    <div>
-                        <p>Name: {{animal_name}}</p>
-                        <p>Id: 0{{id}}</p>
-                    </div>
-                {{/each}}
-            </div>
-            <div>
-                <h1><span>Endangered</span></h1>
-                {{#each   allEndangered}}
-                    <div>
-                        <p>Name: {{animal_name}}</p>
-                        <p>Health: {{animal_health}}</p>
-                        <p>Age: {{animal_age}}</p>
-                        <p>Id: 0{{id}}</p>
-                    </div>
-                {{/each}}
-            </div>
-        </section>
+        <a href="/view"><button type="submit" class="btn btn-success" id="button">Submit</button>
+        </a>
+    </form>
 
 {{/partial}}
+{{> layout.hbs}}
 
-{{#partial "script"}}
-        <script src="/js/jquery-3.4.0.min.js"></script>
-        <script src="/js/script.js"></script>
-{{/partial}}
-
-
-{{> layouts.hbs}}
