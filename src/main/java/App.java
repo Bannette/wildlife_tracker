@@ -46,11 +46,16 @@ public class App {
 
         get ("/view",(request, response) -> {
             Map<String,Object>model =new HashMap<>();
-
             List <Sighting> allSightings = Sighting.allSightings();
             model.put("sightings",allSightings);
             return new ModelAndView(model,"myview.hbs");
         },new HandlebarsTemplateEngine());
+
+        post("/clearAll",(request, response) -> {
+         Sighting.clearallSightings();
+         Map<String,Object>model =new HashMap<>();
+            return new ModelAndView(model,"success.hbs");
+        } ,new HandlebarsTemplateEngine());
 
     }
 }
