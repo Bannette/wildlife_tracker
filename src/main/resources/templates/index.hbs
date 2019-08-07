@@ -1,12 +1,18 @@
-{{#partial "content"}}
-    ​
-    <h1>WILDLIFE TRACKER</h1>
-    ​
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/app.css'>
 {{/partial}}
-​
-{{> layout.hbs}}
-Collapse
 
+{{#partial "content"}}
 
+    <div class="page-header">
 
+        <h1>WILDLIFE TRACKER</h1>
+    </div>
 
+    <div class="button-all">
+        <a class="btn btn-success btn-sm btn-block" href="/form">RECORD ANIMAL SIGHTING</a>
+
+    </div>
+
+{{/partial}}
+{{>layout.hbs}}

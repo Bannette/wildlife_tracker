@@ -51,7 +51,7 @@ public class App {
             return new ModelAndView(model,"myview.hbs");
         },new HandlebarsTemplateEngine());
 
-        post("/clearAll",(request, response) -> {
+        get("/clearAll",(request, response) -> {
          Sighting.clearallSightings();
          Map<String,Object>model =new HashMap<>();
             return new ModelAndView(model,"success.hbs");
