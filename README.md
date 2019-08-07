@@ -6,9 +6,6 @@
 # DESCRIPTION OF A PROJECT
 This application allows user to search for animal and know if its endangared or not and also view thier sighting
 
-BDD
-INPUT: User is able to assign a Hero to a single squad
-OUTPUT: Squad created.
 # PROJECT SETUP INSTRUCTION
 * Installed editor which on my preference is intellJ
 * Installed git vasual control(for tracking my changes)
@@ -18,10 +15,10 @@ OUTPUT: Squad created.
 java
 JDK - Java Development Kit To confirm run the following command $ gradle run
 # TECHNOLOGIES USED
-Java
-Handlebars
-HTML
-CSS
+* Java
+* Handlebars
+* HTML
+* CSS
 # CONTACT INFORMATION
 Contact me via: email banetaloo3@gmail.com Phone number; 0720293998
 
